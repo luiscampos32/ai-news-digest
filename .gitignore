@@ -1,0 +1,45 @@
+# =========================
+# Environment Variables (CRITICAL)
+# =========================
+.env
+*.env
+backend/.env
+frontend/.env
+
+# =========================
+# Backend (Python / FastAPI)
+# =========================
+backend/__pycache__/
+backend/venv/
+backend/env/
+*.py[cod]
+*$py.class
+
+# =========================
+# Frontend (Node, React Native & Expo)
+# =========================
+frontend/node_modules/
+frontend/.expo/
+frontend/dist/
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+
+# Native builds (if you eventually run 'npx expo run:ios' or android)
+frontend/ios/
+frontend/android/
+
+# =========================
+# IDEs & Editors
+# =========================
+.vscode/
+frontend/.vscode/
+.idea/
+*.swp
+*.swo
+
+# =========================
+# OS / General
+# =========================
+.DS_Store
+Thumbs.db

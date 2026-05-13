@@ -1,0 +1,16 @@
+# Render Blueprint: https://render.com/docs/infrastructure-as-code
+# After deploy, set EXPO_PUBLIC_API_URL in the frontend to your service URL (e.g. https://ai-news-api.onrender.com).
+services:
+  - type: web
+    name: ai-news-api
+    runtime: python
+    rootDir: backend
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: NEWSDATA_API_KEY
+        sync: false
